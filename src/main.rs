@@ -16,7 +16,7 @@ fn main() -> ! {
     let mut temp_sensor = Temp::new(peripherals.TEMP);
 
     let die_temp_c: i32 = temp_sensor.measure().to_num();
-    defmt::info!("processor temp is {:i32}°C", die_temp_c);
+    defmt::info!("processor temp is {}°C", die_temp_c);
 
     exit();
 }
